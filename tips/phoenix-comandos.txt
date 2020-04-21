@@ -1,0 +1,49 @@
+Comandos Phoenix 
+
+- Instalar Phoenix
+	$ mix archive.install hex phx_new
+
+- Instalar nodejs v12.x en Ubuntu 14.04 (https://github.com/nodesource/distributions/blob/master/README.md#debinstall)
+	$ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+	$ sudo apt-get install -y nodejs	
+
+- Instalar inotify-tools (Phoenix uses for live code reloading)
+	https://github.com/inotify-tools/inotify-tools/wiki
+	$ sudo apt-get install inotify-tools
+
+- Crear un nuevo proyecto (Default con PostgreSQL):
+	$ mix phx.new discuss
+
+- Crear un nuevo proyecto con soporte para MySQL:
+	$ mix phx.new discuss --database mysql
+
+- Crear nuestra base de datos:
+	$ mix ecto.create
+
+- Iniciar el servidor:
+	$ mix phx.server
+
+- Generar Contexto y modelos(API)
+	$ mix phx.gen.json Management Project projects title:string description:string 
+
+- Ejecutar migraciones
+	$ mix ecto.migrate
+
+- Iniciar nuestro proyecto web(server) dentro de la consola iex (Util para debug)
+	$ iex -S mix phx.server
+
+- Crear una migracion
+	$ mix ecto.gen.migration add_topics
+
+- Ejecutar migraciones
+	$ mix ecto.migrate
+
+- Crear un modelo (phoenix 1.4.16)
+	$ mix phx.gen.schema Topic topics title:string
+	
+	Nota: Se va crear la migracion y el modelo:
+		* creating lib/discuss/topic.ex
+		* creating priv/repo/migrations/20200420235444_create_topics.exs
+
+- 
+
