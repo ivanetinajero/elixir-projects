@@ -45,5 +45,8 @@ Comandos Phoenix
 		* creating lib/discuss/topic.ex
 		* creating priv/repo/migrations/20200420235444_create_topics.exs
 
+- Ver las rutas definidas en nuestro proyecto
+	$ mix phx.routes
+
 - 
 

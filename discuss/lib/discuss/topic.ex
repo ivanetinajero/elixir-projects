@@ -10,9 +10,10 @@ defmodule Discuss.Topic do
   end
 
   @doc false
-  def changeset(topic, attrs) do
+  def changeset(topic, attrs \\ %{}) do
     topic
     |> cast(attrs, [:title])
     |> validate_required([:title])
+    # Esta funcion al final regresa un tipo Ecto.Changeset (Esto es lo que se ira a la bd)
   end
 end

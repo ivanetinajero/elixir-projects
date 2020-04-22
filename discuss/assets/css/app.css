@@ -1,3 +1,13 @@
 /* This file is for your main application css. */
 
 @import "./phoenix.css";
+
+.form-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.my-global-class {
+    position: relative;
+    margin-bottom: 25px;
+}

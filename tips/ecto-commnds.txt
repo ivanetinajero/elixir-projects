@@ -1,0 +1,4 @@
+- Recuperar todas las entidades
+	iex> Discuss.Repo.all(Discuss.Topic)
+
+- 
