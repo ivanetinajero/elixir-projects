@@ -2,6 +2,7 @@ Comandos Phoenix
 
 - Instalar Phoenix
 	$ mix archive.install hex phx_new
+	$ mix archive.install hex phx_new 1.5.1
 
 - Instalar nodejs v12.x en Ubuntu 14.04 (https://github.com/nodesource/distributions/blob/master/README.md#debinstall)
 	$ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -

@@ -1,0 +1,29 @@
+- Documentacion
+	https://github.com/ueberauth/ueberauth
+	
+- Add the dependency ueberauth (mix.exs)
+- Add the dependency ueberauth_github (mix.exs) 
+	$ mix deps.get
+	
+- En github configurar nuestra aplicacion.
+   Settings-> Developer settings -> GitHub Apps -> OAuth Apps -> Register a new Application
+   http://localhost:4000/auth/github/callback
+   
+   Client ID
+    a899b4a12b8b95595cc5
+	Client Secret
+    eae8212231d9e064f810c51dea8ad194fcee6589
+   
+- Configurar oAuth (config/config.exs)
+	config :ueberauth, Ueberauth,
+	  providers: [
+		 #facebook: { Ueberauth.Strategy.Facebook, [ opt1: "value", opts2: "value" ] },
+		 github: { Ueberauth.Strategy.Github, [] }
+	  ]
+
+	config :ueberauth, Ueberauth.Strategy.Github.OAuth,
+	  client_id: "a899b4a12b8b95595cc5",
+	  client_secret: "eae8212231d9e064f810c51dea8ad194fcee6589"
+	  
+- 
+
