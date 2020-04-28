@@ -8,6 +8,9 @@ defmodule DiscussWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    # Cada que el usuario haga un Request, pasara por la logica de este Module Plug (Interceptor)
+    plug Discuss.Plugs.SetUser
+
   end
 
   pipeline :api do
@@ -31,9 +34,10 @@ defmodule DiscussWeb.Router do
   scope "/auth", Discuss do
     pipe_through :browser # Use the default browser stack
 
+    # tiene que ir al principio. ¿Porque?
+    get "/signout", AuthController, :signout
     get "/:provider", AuthController, :request # La funcion request es creada por Ueberauth en el controller
-    get "/:provider/callback", AuthController, :callback
-    #get "/signout", AuthController, :signout    
+    get "/:provider/callback", AuthController, :callback     
     
   end
 

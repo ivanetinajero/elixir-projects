@@ -8,6 +8,9 @@ defmodule DiscussWeb.TopicController do
   alias DiscussWeb.Router.Helpers, as: Routes
 
   def index(conn, _params) do
+    IO.puts "@@@@@@@"
+    IO.inspect(conn.assigns)
+    IO.puts "@@@@@@@"
     # Nos traemos todos los Topics de la BD para pasarlos al template
     topics = Repo.all(Discuss.Topic)
     render conn, "index.html", topics: topics
