@@ -49,10 +49,5 @@ Comandos Phoenix
 - Ver las rutas definidas en nuestro proyecto
 	$ mix phx.routes
 	
-- Crear una nueva migracion
-	$ mix ecto.gen.migration add_users
-	
-- 		
-
-- 
+-  
 

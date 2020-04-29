@@ -5,7 +5,9 @@ defmodule Discuss.Topic do
   # Indicamos que este modelo mapea a la tabla 'topics' con un campo llamado title
   schema "topics" do
     field :title, :string
-
+    # Definimos una relacion (Un topic solo pertenece a un usuario)
+    belongs_to :user, Discuss.User
+    #has_many :comments, Discuss.Comment
     timestamps()
   end
 
