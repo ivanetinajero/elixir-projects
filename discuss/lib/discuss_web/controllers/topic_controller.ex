@@ -114,4 +114,10 @@ defmodule DiscussWeb.TopicController do
     end
   end
 
+  # funcion para renderizar un topic determinado (con sus comentarios)
+  def show(conn, %{"id" => topic_id}) do
+    topic = Repo.get!(Topic, topic_id)
+    render conn, "show.html", topic: topic
+  end
+
 end

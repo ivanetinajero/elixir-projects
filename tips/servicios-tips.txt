@@ -1,0 +1,6 @@
+- Crear un modelo perteneciente a un Contexto (Catalogos)
+	$ mix phx.gen.html Catalogos Dependencia dependencias nombre:string numeroDependencia:integer
+	
+	Nota: Este comando nos va crear: controller, templates, views, model, migrations y tests.
+	
+- 

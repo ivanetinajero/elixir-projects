@@ -14,4 +14,8 @@ import "phoenix_html"
 // Import local files
 //
 // Local files can be imported directly using relative paths, for example:
+
+// Descomentamos esta linea para hacer el import de socketen nuestra vista ...
 // import socket from "./socket"
+
+import "./socket"
