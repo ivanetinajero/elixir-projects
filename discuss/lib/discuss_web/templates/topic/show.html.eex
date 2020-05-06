@@ -3,8 +3,7 @@
 <div class="input-field">
   <textarea class="materialize-textarea" id="txtcomentario"></textarea>
   <button class="btn" id="btnAdd">Add Comment</button>
-  <ul class="collection">
-  </ul>
+  <ul class="collection"></ul>
 </div>
 
 <script>

@@ -2,6 +2,12 @@ defmodule Discuss.Comment do
   use Ecto.Schema
   import Ecto.Changeset
 
+  # Esto significa lo siguiente. 
+  # Cuando la libreria Jason (usada en Sockets) trate de convertir a JSON un tipo Comment
+  # solo nos interesa el atributo content y user 
+  # Los demas topic, timestamps ignoralos
+  @derive {Jason.Encoder, only: [:content, :user]}
+
   # Indicamos que este modelo mapea a la tabla 'comments' 
   schema "comments" do
     field :content, :string

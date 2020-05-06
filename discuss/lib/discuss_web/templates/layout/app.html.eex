@@ -13,6 +13,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     -->
     <%= csrf_meta_tag() %>
+
+    <script>
+      /* Generamos un Token para el usuario actual, y por el momento dentro de este Token solo
+         estara guardado el user_id.
+         La variable window.userToken, es la que se pasa a la funcion new Socket en el archivo socket.js, de
+         esta forma estamos pasando al servidor el token y saber el user_id
+      */
+      <%= if @conn.assigns.user do %>
+        window.userToken = "<%= Phoenix.Token.sign(DiscussWeb.Endpoint, "key", @conn.assigns.user.id) %>";
+      <% end %>
+    </script>
+
   </head>
   <body>
      <nav class="light-blue">
