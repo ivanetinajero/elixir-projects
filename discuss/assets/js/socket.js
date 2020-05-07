@@ -52,7 +52,6 @@ function renderComment(event) {
  * @param {*} comment 
  */
 function commentTemplate(comment) {
-
   let email = 'Anonymous';
   // Validamos por si un comment no tiene asociado un user
   if (comment.user) {
@@ -65,6 +64,5 @@ function commentTemplate(comment) {
   return li; 
 }
   
-
 // Agregamos nuestra funcion createSocket con alcance de Window
 window.createSocket = createSocket;
