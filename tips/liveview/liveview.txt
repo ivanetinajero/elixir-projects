@@ -1,6 +1,12 @@
+- Crear proyecto web con MySQL y soporte para LiveView
+	$ mix phx.new dependencias --database mysql --live
+
 - Crear un modelo perteneciente a un Contexto (Catalogos)
 	$ mix phx.gen.html Catalogos Dependencia dependencias nombre:string numeroDependencia:integer
 	
 	Nota: Este comando nos va crear: controller, templates, views, model, migrations y tests.
 	
-- 
+- Generar CRUD con LiveView
+	$ mix phx.gen.live Catalogos Dependencia dependencias nombre:string numeroDependencia:integer
+	
+
